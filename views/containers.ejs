@@ -1,0 +1,27 @@
+<div class="item">
+    <div class="name">
+        <%= message.name %>
+    </div>
+
+    <div class="score">
+        <%= message.score %>
+    </div>
+
+    <div class="date">
+        <%= message.date %>
+    </div>
+
+    <% if (message.image) { %>
+        <div class="image">
+            <img src="<%= message.image %>"/>
+        </div>
+    <% } %>
+
+    <div class="remove">
+        <form method="POST" action="remove">
+            <label for="remove-<%= message._id %>" class="remove-button">+</label>
+            <input id="remove-<%= message._id %>" type="submit" name="removebutton" value=""/>
+            <input type="hidden" name="itemIndex" value="<%= message._id %>"/>
+        </form>
+    </div>
+</div>          

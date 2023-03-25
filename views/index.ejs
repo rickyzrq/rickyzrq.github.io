@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Puzzle</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script.js" type="module"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-info header-title">24 Puzzle</div>
+        <div class="header-info help"><a href="https://en.wikipedia.org/wiki/24_(puzzle)">How to play 24 Puzzle?</a></div>
+    </div>
+    <div class = "body-class">
+        <div id="game-container">
+            <div class="flex-container">
+                <div class="cards-container">
+                    <div class="bracket bracketA left" id="bracket1">(</div>
+                    <div class="card-container" id="container-1"></div>
+                    <div class="bracket bracketA right" id="bracket2">)</div>
+                    <div class="operation-contianer operation-container-1">
+                        <h1 class="operation-text operation-text-1"></h1>
+                    </div>
+                    <div class="bracket bracketB left" id="bracket3">(</div>
+                    <div class="card-container" id="container-2"></div>
+                    <div class="bracket bracketB right" id="bracket4">)</div>
+                    <div class="operation-contianer operation-container-2">
+                        <h1 class="operation-text operation-text-2"></h1>
+                    </div>
+                    <div class="bracket bracketC left" id="bracket5">(</div>
+                    <div class="card-container" id="container-3"></div>
+                    <div class="bracket bracketC right" id="bracket6">)</div>
+                    <div class="operation-contianer operation-container-3">
+                        <h1 class="operation-text operation-text-3"></h1>
+                    </div>
+                    <div class="bracket bracketD left" id="bracket7">(</div>
+                    <div class="card-container" id="container-4"></div>
+                    <div class="bracket bracketD right" id="bracket8">)</div>
+                </div>
+
+                <div class="info-container-top">
+                    <div class="info">
+                        <p class="info-text" id="timer">
+                            0:00
+                        </p>
+                        <p class="info-subtext">
+                            Time
+                        </p>
+                    </div>
+                    <div class="info">
+                        <p class="info-text" id="value"></p>
+                        <p class="info-subtext" id="value-sub">
+                            Value
+                        </p>
+                    </div>
+                    <div class="info">
+                        <p class="info-text" id="score">0</p>
+                        <p class="info-subtext">
+                            Score
+                        </p>
+                    </div>
+                </div>
+                <div class="info-container-bottom">
+                    <div class="subinfo" id="reset">
+                        <p class="info-subheader hover-class">Reset Cards</p>
+                    </div>
+                    <div class="subinfo">
+                        <p class="info-subheader" id="remaining-rounds">Round 1/5</p>
+                    </div>
+                    <div class="subinfo" id="next/skip-container">
+                        <p class="info-subheader hover-class" id="next/skip">
+                            Skip Round->
+                            2/2
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="form-container">
+            <form method="POST" action="/upload">
+                <div class="form-content-container">
+                    <div class="form-content">
+                        <input class="name-input" type="text" name="name" placeholder="Your Name" />
+                    </div>
+                    <div class="form-content">
+                        <div id="score-final">
+                        </div>
+                        <input type="hidden" id="hidden-score" name="score" />
+                    </div>
+    
+                    <div class="submit-container">
+    
+                        <div class="form-content">
+                            <input class="submit-input hover-class" type="submit" name="submitbutton" value="Submit" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

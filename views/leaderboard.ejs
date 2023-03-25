@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Puzzle</title>
+
+    <link rel = "stylesheet" href = "leaderboard.css">
+</head>
+<body>
+    <div class = "title">Leaderboard</div>
+
+    <div class="items-container">
+        <div class="item">
+            <div class="position">
+                Position
+            </div>
+            <div class="name item-component">
+                Name
+            </div>
+        
+            <div class="score item-component">
+                Score
+            </div>
+        
+            <div class="date item-component">
+                Date
+            </div>
+        </div>  
+        <% messages.forEach(function(message, index) { %>    
+            <div class="item">
+                <div class="position">
+                    <%= (index + 1) + "." %>
+                </div>
+                <div class="name item-component">
+                    <%= message.name %>
+                </div>
+            
+                <div class="score item-component">
+                    <%= message.score %>
+                </div>
+            
+                <div class="date item-component">
+                    <%= message.date %>
+                </div>
+            </div>       
+        <% }) %>        
+    </div>
+</body>
+</html>
